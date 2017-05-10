@@ -58,21 +58,9 @@
 }
 
 .keyboard-shortcuts {
-  @extend %modal;
   padding: #{20 / $base-font-size}rem;
+  padding-bottom: #{40 / $base-font-size}rem;
   width: #{450 / $base-font-size}rem;
-}
-
-.keyboard-shortcuts__header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: #{20 / $base-font-size}rem;
-}
-
-.keyboard-shortcuts__close {
-  @include themify() {
-    @extend %icon;
-  }
 }
 
 .keyboard-shortcut-item {
