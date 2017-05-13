@@ -4,6 +4,13 @@ import nodemailer from 'nodemailer';
 import mg from 'nodemailer-mailgun-transport';
 import User from '../models/user';
 
+export function findUserByUsername(username, cb) {
+  User.findOne({ username },
+    (err, user) => {
+      cb(user);
+    });
+}
+
 export function createUser(req, res, next) {
   const user = new User({
     username: req.body.username,
